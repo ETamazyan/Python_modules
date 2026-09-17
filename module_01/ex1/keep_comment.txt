@@ -1,0 +1,1 @@
+It is simply a condition that checks how the file was used.
