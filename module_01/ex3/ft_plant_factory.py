@@ -11,7 +11,7 @@ class Plant:
         self.age_days += 1
 
     def show(self):
-	    print(f"{self.name}: {self.height:.1f}cm, {self.age_days} days old")
+        print(f"{self.name}: {self.height:.1f}cm, {self.age_days} days old")
 
 
 rose = Plant("Rose", 25.0, 30)
