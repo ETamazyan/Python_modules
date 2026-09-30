@@ -43,10 +43,10 @@ class Flower(Plant):
     ) -> None:
         super().__init__(name=name, height=height, age_days=age_days)
         self.color = color
-    print("=== Flower")
+    print("\n=== Flower")
 
     def bloom(self):
-        pass
+        print("[asking the rose to bloom]")
 
     def show(self) -> None:
         super().show()
@@ -63,10 +63,14 @@ class Tree(Plant):
     ) -> None:
         super().__init__(name=name, height=height, age_days=age_days)
         self.trunk_diameter = trunk_diameter
-    print("=== Tree")
+        print("\n=== Tree")
 
     def produce_shade(self):
-        pass
+        print("[asking the oak to produce shade]")
+
+    def show(self) -> None:
+        super().show()
+        print(f"Trunk diameter: {self.trunk_diameter}")
 
 
 class Vegetable(Plant):
@@ -76,12 +80,17 @@ class Vegetable(Plant):
         height: int,
         age_days: int,
         harvest_season: str,
-        nutritional_value: str,
+        nutritional_value: int,
     ) -> None:
         super().__init__(name=name, height=height, age_days=age_days)
         self.harvest_season = harvest_season
         self. nutritional_value = nutritional_value
-    print("=== Vegetable")
+        print("\n=== Vegetable")
+
+    def show(self) -> None:
+        super().show()
+        print(f"Harvest season: {self.harvest_season}")
+        print(f"Nutritional value: {self.nutritional_value}")
 
 
 if __name__ == "__main__":
@@ -94,14 +103,28 @@ if __name__ == "__main__":
 
     rose.show()
     print("Rose has not bloomed yet")
-    print("[asking the rose to bloom]")
+    rose.bloom()
     rose.show()
     print("Rose is blooming beautifully!")
 
     oak = Tree(
         name="Oak",
-        height=5.0,
+        height=200.0,
         age_days=365,
+        trunk_diameter="5.0cm",
     )
 
     oak.show()
+    oak.produce_shade()
+    print(f"Tree {oak._name} now produces a shade of {oak._height} long and {oak.trunk_diameter} wide.")
+
+    print("\n=== Vegetable")
+    tomato = Vegetable(
+        name="tomato",
+        height=5.0,
+        age_days=10,
+        harvest_season="April",
+        nutritional_value=0,
+    )
+
+    tomato.show()
