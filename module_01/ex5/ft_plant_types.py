@@ -3,7 +3,7 @@ class Plant:
         self._name = name
         self._height = height
         self._age_days = age_days
-        # print(f"Plant created: {self._name}")
+        print(f"Plant created: {self._name}")
 
     def grow(self) -> None:
         self._height += 0.8
@@ -43,6 +43,7 @@ class Flower(Plant):
     ) -> None:
         super().__init__(name=name, height=height, age_days=age_days)
         self.color = color
+    print("\n=== Flower")
 
     def bloom(self):
         print("[asking the rose to bloom]")
@@ -62,6 +63,7 @@ class Tree(Plant):
     ) -> None:
         super().__init__(name=name, height=height, age_days=age_days)
         self.trunk_diameter = trunk_diameter
+        print("\n=== Tree")
 
     def produce_shade(self):
         print("[asking the oak to produce shade]")
@@ -83,6 +85,7 @@ class Vegetable(Plant):
         super().__init__(name=name, height=height, age_days=age_days)
         self.harvest_season = harvest_season
         self. nutritional_value = nutritional_value
+        print("\n=== Vegetable")
 
     def show(self) -> None:
         super().show()
@@ -91,14 +94,11 @@ class Vegetable(Plant):
 
 
 if __name__ == "__main__":
-    print("=== Garden Plant Types ===", end="")
-    print("\n=== Flower")
-
     rose = Flower(
         name="Rose",
         height=15.0,
         age_days=10,
-        color="red",
+        color="yellow",
     )
 
     rose.show()
@@ -107,7 +107,6 @@ if __name__ == "__main__":
     rose.show()
     print("Rose is blooming beautifully!")
 
-    print("\n=== Tree")
     oak = Tree(
         name="Oak",
         height=200.0,
@@ -117,7 +116,8 @@ if __name__ == "__main__":
 
     oak.show()
     oak.produce_shade()
-    print(f"Tree {oak._name} now produces a shade of {oak._height}cm long and {oak.trunk_diameter} wide.")
+    print(f"Tree {oak._name} now produces a shade of {oak._height} long and "
+          f"{oak.trunk_diameter} wide.")
 
     print("\n=== Vegetable")
     tomato = Vegetable(
@@ -128,10 +128,4 @@ if __name__ == "__main__":
         nutritional_value=0,
     )
 
-    tomato.show()
-    print("[make tomato grow and age for 20 days]")
-    for i in range(20):
-        tomato.age()
-    tomato.set_height(47.0)
-    tomato.nutritional_value = 20
     tomato.show()
