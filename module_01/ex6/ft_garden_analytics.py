@@ -183,6 +183,7 @@ if __name__ == "__main__":
         f"{Plant.is_older_than_year(400)}"
     )
 
+    print("\n", end="")
     print("=== Flower")
 
     rose = Flower("Rose", 15, 10, "red")
@@ -196,6 +197,7 @@ if __name__ == "__main__":
     rose.show()
     display_statistics(rose)
 
+    print("\n", end="")
     print("=== Tree")
 
     oak = Tree("Oak", 200, 365, 5)
@@ -207,6 +209,7 @@ if __name__ == "__main__":
 
     display_statistics(oak)
 
+    print("\n", end="")
     print("=== Seed")
 
     sunflower = Seed("Sunflower", 80, 45, "yellow", 0)
@@ -220,9 +223,26 @@ if __name__ == "__main__":
     sunflower.show()
     display_statistics(sunflower)
 
+    print("\n", end="")
     print("=== Anonymous")
 
     anonymous = Plant.create_anonymous()
 
     anonymous.show()
     display_statistics(anonymous)
+
+
+# [asking the rose to bloom]
+# Trunk diameter: 5
+
+# add this
+# [asking the oak to produce shade]
+# before this # Tree Oak now produces a shade of 200.0cm long and 5.0cm wide.
+
+#newline after shade before Seed===
+
+
+# make this
+# [asking the sunflower to bloom]
+# to this
+# [make sunflower grow, age and bloom]
