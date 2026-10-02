@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class Plant:
     def __init__(self, name: str, height: int, age_days: int) -> None:
         self._name = name
@@ -176,14 +178,10 @@ if __name__ == "__main__":
     print("=== Garden statistics ===")
 
     print("=== Check year-old")
-    print(
-        f"Is 30 days more than a year? -> "
-        f"{Plant.is_older_than_year(30)}"
-    )
-    print(
-        f"Is 400 days more than a year? -> "
-        f"{Plant.is_older_than_year(400)}"
-    )
+    print(f"Is 30 days more than a year? -> "
+          f"{Plant.is_older_than_year(30)}")
+    print(f"Is 400 days more than a year? -> "
+          f"{Plant.is_older_than_year(400)}")
 
     print("\n", end="")
     print("=== Flower")
@@ -235,9 +233,3 @@ if __name__ == "__main__":
 
     anonymous.show()
     display_statistics(anonymous)
-
-
-# make this
-# [asking the sunflower to bloom]
-# to this
-# [make sunflower grow, age and bloom]
