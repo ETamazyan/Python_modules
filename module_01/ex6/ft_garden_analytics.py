@@ -14,7 +14,8 @@ class Plant:
         self._stats.record_age()
 
     def show(self) -> None:
-        print(f"{self._name}: {self._height:.1f}cm, {self._age_days} days old")
+        print(f"{self._name}: {round(self._height):.1f}cm, {self._age_days}"
+              f" days old")
         self._stats.record_show()
 
     def set_height(self, height: int) -> None:
@@ -79,7 +80,7 @@ class Flower(Plant):
         self._has_bloomed = False
 
     def bloom(self) -> None:
-        print(f"[asking the {self._name.lower()} to bloom]")
+        print(f"[asking the {self._name.lower()} to grow and bloom]")
         self._has_bloomed = True
 
     def show(self) -> None:
@@ -109,7 +110,8 @@ class Seed(Flower):
         print(f"Seeds: {self.number_of_seeds}")
 
     def bloom(self) -> None:
-        super().bloom()
+        # super().bloom()
+        print("[make sunflower grow, age and bloom]")
         self.number_of_seeds = 42
 
 
@@ -131,7 +133,7 @@ class Tree(Plant):
 
     def show(self) -> None:
         super().show()
-        print(f"Trunk diameter: {self.trunk_diameter}")
+        print(f"Trunk diameter: {self.trunk_diameter:.1f}cm")
 
     class TreeStatistics(Plant.Statistics):
         def __init__(self) -> None:
@@ -191,7 +193,8 @@ if __name__ == "__main__":
     rose.show()
     display_statistics(rose)
 
-    rose.grow()
+    for i in range(10):
+        rose.grow()
     rose.bloom()
 
     rose.show()
@@ -216,8 +219,10 @@ if __name__ == "__main__":
 
     sunflower.show()
 
-    sunflower.grow()
-    sunflower.age()
+    for i in range(37):
+        sunflower.grow()
+    for i in range(20):
+        sunflower.age()
     sunflower.bloom()
 
     sunflower.show()
@@ -230,16 +235,6 @@ if __name__ == "__main__":
 
     anonymous.show()
     display_statistics(anonymous)
-
-
-# [asking the rose to bloom]
-# Trunk diameter: 5
-
-# add this
-# [asking the oak to produce shade]
-# before this # Tree Oak now produces a shade of 200.0cm long and 5.0cm wide.
-
-#newline after shade before Seed===
 
 
 # make this
