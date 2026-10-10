@@ -7,9 +7,128 @@ class Person:
     self.name = name
 
 p1 = Person("Linus")
-p2 = Person("Emil")
+p2 = Person("Lili")
 
 Person.lastname = "Refsnes"
 
 print(p1.lastname)
 print(p2.lastname)
+
+10/10/2026
+Note: Private properties cannot be accessed directly from outside the class.
+To access a private property, you can create a getter method:
+
+Note: A single underscore _ is just a convention. It tells other programmers that the property is intended for internal use, but Python doesn't enforce this restriction.
+
+
+Note: Just like private properties with double underscores, private methods cannot be called directly from outside the class. The __validate method can only be used by other methods inside the class.
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.__age = age
+
+p1 = Person("Emil", 30)
+
+# This is how Python mangles the name:
+print(p1._Person__age) # Not recommended!
+
+Note: While you can access private properties using the mangled name, it's not recommended. It defeats the purpose of encapsulation.
+
+
+//Q???
+
+
+. The inner class can access the properties and methods of the outer class.
+Inner classes are useful for grouping classes that are only used in one place, making your code more organized.
+
+-> -> TEST THIS (INNER CLASS)
+
+class Outer:
+  def __init__(self):
+    self.name = "Outer Class"
+
+  class Inner:
+    def __init__(self):
+      self.name = "Inner Class"
+
+    def display(self):
+      print("This is the inner class")
+
+outer = Outer()
+print(outer.name)
+
+
+-> -> THIS, TOO
+class Car:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Drive!")
+
+class Boat:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Sail!")
+
+class Plane:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def move(self):
+    print("Fly!")
+
+car1 = Car("Ford", "Mustang")       #Create a Car object
+boat1 = Boat("Ibiza", "Touring 20") #Create a Boat object
+plane1 = Plane("Boeing", "747")     #Create a Plane object
+
+for x in (car1, boat1, plane1):
+  x.move()
+
+
+----------------
+
+Example
+Access the inner class and create an object:
+
+class Outer:
+  def __init__(self):
+    self.name = "Outer"
+
+  class Inner:
+    def __init__(self):
+      self.name = "Inner"
+
+    def display(self):
+      print("Hello from inner class")
+
+outer = Outer()
+inner = outer.Inner()
+inner.display()
+
+
+If you want the inner class to access the outer class, you need to pass the outer class instance as a parameter:
+
+Example
+Pass the outer class instance to the inner class:
+
+class Outer:
+  def __init__(self):
+    self.name = "Emil"
+
+  class Inner:
+    def __init__(self, outer):
+      self.outer = outer
+
+    def display(self):
+      print(f"Outer class name: {self.outer.name}")
+
+outer = Outer()
+inner = outer.Inner(outer)
+inner.display()
