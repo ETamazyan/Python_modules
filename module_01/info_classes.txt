@@ -132,3 +132,53 @@ class Outer:
 outer = Outer()
 inner = outer.Inner(outer)
 inner.display()
+
+
+------
+
+class Phone:
+    def __init__(self):
+        self.brand = "Samsung"
+
+    class Camera:
+        def show_brand(self):
+            print(self.brand) // does not have brand attribute
+
+
+if __name__ == "__main__":
+    camera = Phone.Camera()
+    camera.show_brand()
+
+    It raises an AttributeError, because the Camera object does not have a brand attribute.
+Why?
+#### Because self refers to the current object, not the class that contains it. ####
+
+Phone object
+self.brand = "Samsung"
+
+
+
+
+Camera object
+Has its own self, but no brand attribute yet.
+
+FOR THIS WE CAN
+
+How do we fix it?
+Pass the Phone object into the Camera object.
+
+class Phone:
+    def __init__(self):
+        self.brand = "Samsung"
+        self.camera = self.Camera(self)
+
+    class Camera:
+        def __init__(self, phone):
+            self.phone = phone
+
+        def show_brand(self):
+            print(self.phone.brand)
+
+
+phone = Phone()
+phone.camera.show_brand()
