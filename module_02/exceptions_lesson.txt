@@ -200,3 +200,8 @@ except → runs if a matching error occurs.
 else → runs only if try finishes without an error.
 
 finally → runs regardless of success or error in normal execution.
+
+
+try existing exceptions all types
+
+create your own, should inherit from Exeption
