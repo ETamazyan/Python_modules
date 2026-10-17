@@ -1,0 +1,202 @@
+Syntax
+Python provides four main keywords for handling exceptions: try, except, else and finally each plays a unique role. Let's see syntax:
+
+try:
+      # Code 
+except SomeException:
+      # Code 
+else:
+     # Code 
+finally:
+    # Code 
+
+try: Runs the risky code that might cause an error.
+except: Catches and handles the error if one occurs.
+else: Executes only if no exception occurs in try.
+finally: Runs regardless of what happens useful for cleanup tasks like closing files.
+Exception Handling allows a program to handle unexpected errors during execution in a controlled way, instead of crashing abruptly. It enables programs to detect errors, manage them properly and continue execution wherever possible.
+
+Handles runtime errors such as invalid input, file not found, division by zero and type mismatches that occur during program execution.
+Helps improve program reliability by ensuring the application does not terminate unexpectedly when an error occurs.
+
+
+try:
+    n = 0
+    res = 100 / n
+    
+except ZeroDivisionError:
+    
+except ValueError:
+    print('Enter a valid number!')
+    
+else:
+    print('Result is', res)
+    
+finally:
+    print('Execution complete.')
+
+try:
+    n = 0
+    res = 100 / n
+    
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+    
+except ValueError:
+    print("Enter a valid number!")
+    
+else:
+    print("Result is", res)
+    
+finally:
+    print("Execution complete.")
+
+
+Python try, except, else, finally — Fast Tutorial
+Remember this structure. It covers almost every basic case you'll need.
+1. The complete syntax
+try:    number = int(input("Enter a number: "))except ValueError:    print("Please enter a valid number!")else:    print(f"Your number is {number}")finally:    print("Program finished!")
+
+
+
+2. When does each block execute?
+Block	When it runs
+try	Always starts first
+except	When a matching error occurs in try
+else	When try finishes without an error
+finally	Almost always, regardless of the outcome
+3. Four cases to remember
+Case 1 — No error
+try:    print(10 / 2)except ZeroDivisionError:    print("Error")else:    print("Success")finally:    print("Always")
+
+
+
+Output
+5.0
+Success
+Always
+
+
+
+Case 2 — Matching error
+try:    print(10 / 0)except ZeroDivisionError:    print("Cannot divide by zero")else:    print("Success")finally:    print("Always")
+
+
+
+Output
+Cannot divide by zero
+Always
+
+
+else is skipped.
+
+Case 3 — Different error
+try:    print("hello" + 5)except ValueError:    print("Invalid value")finally:    print("Always")
+
+
+
+Output
+Always
+
+
+Then the unhandled TypeError propagates and the program stops unless something else catches it.
+
+Case 4 — Multiple error types
+try:    number = int("abc")    print(10 / number)except ValueError:    print("Invalid number")except ZeroDivisionError:    print("Cannot divide by zero")finally:    print("Always")
+
+
+
+Output
+Invalid number
+Always
+
+
+
+4. Useful syntax variations
+# Catch the error messageexcept ValueError as error:    print(error)# Catch multiple error typesexcept (ValueError, TypeError) as error:    print(error)# Catch any ordinary exception (use carefully)except Exception as error:    print(error)# try + finally, without excepttry:    print("Working")finally:    print("Cleanup")
+
+
+
+Important: Put more specific exceptions before more general ones. Avoid bare except: unless you specifically need to catch everything, including exceptions such as KeyboardInterrupt.
+5. Test yourself
+1. When does `else` execute?
+
+Whenever an error occurs
+
+Only when `try` succeeds
+
+Always
+
+
+
+2. What happens to `finally` when `try` raises a caught error?
+
+It is skipped
+
+It executes
+
+It runs before try
+
+
+
+3. Which block handles a ValueError?
+
+else
+
+finally
+
+except ValueError
+
+
+
+4. What happens if the error isn't matched by any except clause?
+
+It is silently ignored
+
+It propagates after finally runs
+
+else executes
+
+
+Check answers
+The one-line rule: try attempts, except handles, else celebrates success, finally cleans up.
+
+but what if there is on else option too?
+Even if you add an else block, it will not execute when an error occurs in try, whether the error is caught or not.
+
+try:
+    print(10 / 0)
+
+except ValueError:
+    print("Caught ValueError")
+
+else:
+    print("Success!")
+
+finally:
+    print("Finally runs")
+
+print("Program continues")
+
+Output:
+
+Finally runs
+ZeroDivisionError: division by zero
+Why?
+try raises a ZeroDivisionError.
+
+except ValueError doesn't catch it.
+
+else is skipped because try failed.
+
+finally executes.
+
+The uncaught error propagates, so Program continues never prints.
+
+Remember these three rules:
+
+except → runs if a matching error occurs.
+
+else → runs only if try finishes without an error.
+
+finally → runs regardless of success or error in normal execution.
