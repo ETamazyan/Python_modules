@@ -202,6 +202,38 @@ else → runs only if try finishes without an error.
 finally → runs regardless of success or error in normal execution.
 
 
-try existing exceptions all types
+(try existing exceptions all types)
 
-create your own, should inherit from Exeption
+(create your own, should inherit from Exeption)
+1. class GardenError(Exception):
+Creates your own error named GardenError.
+- Exception is Python's built-in parent class for errors.
+- Inheriting from it makes GardenError a real Python exception that you can raise and catch.
+2. def __init__(self, message="Unknown garden error"):
+This initializes the error when you create it.
+- self refers to this particular error object.
+- message is the error message you want to display.
+- "Unknown garden error" is the default if you don't provide a message.
+Example:
+raise GardenError("The garden is damaged!")
+
+
+
+If you don't provide a message:
+raise GardenError()
+
+
+
+The message will be Unknown garden error.
+3. super().__init__(message)
+Calls the parent class (Exception) to initialize the exception with your message.
+This allows Python to display the message when you catch and print the error:
+try:    raise GardenError("The garden is damaged!")except GardenError as error:    print(error)
+
+
+
+Output:
+The garden is damaged!
+
+
+Remember: __init__ sets up the error message, and super().__init__(message) passes that message to Python's built-in exception system.
