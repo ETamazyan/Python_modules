@@ -1,4 +1,56 @@
 #!/usr/bin/env python3
+import sys
 
 if __name__ == "__main__":
     print("=== Player Score Analytics ===")
+
+    if len(sys.argv) < 2:
+        print("No scores provided. Usage: python3 "
+              "ft_score_analytics.py <score1> <score2> ...")
+    else:
+        scores = []
+
+        for i in range(1, len(sys.argv)):
+            try:
+                number = int(sys.argv[i])
+                scores.append(number)
+            except ValueError:
+                print(f"Invalid parameter: '{sys.argv[i]}'")
+
+        if len(scores) == 0:
+            print("No scores provided. Usage: python3 "
+                  "ft_score_analytics.py <score1> <score2> ...")
+        else:
+            print(f"Scores processed: {scores}")
+            print(f"Total players: {len(scores)}")
+            print(f"Total score: {sum(scores)}")
+            print(f"Average score: {sum(scores) / len(scores)}")
+            print(f"High score: {max(scores)}")
+            print(f"Low score: {min(scores)}")
+            print(f"Score range: {max(scores) - min(scores)}")
+
+
+# #!/usr/bin/env python3
+# import sys
+
+# if __name__ == "__main__":
+#     print("=== Player Score Analytics ===")
+#     # print(sys.argv)
+
+#     if len(sys.argv) < 2:
+#         print("No scores provided. Usage: python3 " +
+#               "ft_score_analytics.py <score1> <score2> ...")
+
+#     scores = []
+#     for i in range(1, len(sys.argv)):
+#         try:
+#             number = int(sys.argv[i])
+#             scores.append(number)
+#             print("sdf")
+#         except ValueError:
+#             print("No scores provided. Usage: python3 " +
+#                   "ft_score_analytics.py <score1> <score2> ...")
+#     #         break
+#     # print("")
+#     for j in range(0, len(scores)):
+#         print(scores[j])
