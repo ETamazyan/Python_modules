@@ -5,3 +5,12 @@
 
 # args to use only users arguments
 # args = sys.argv[1:]
+
+
+# slicing is not recomended enumerate()
+# for i, arg in enumerate(sys.argv[1:], start=1):
+#     print(f"Argument {i}: {arg}")
+
+# args to use only users arguments
+# args = sys.argv[1:]
+
