@@ -9,7 +9,6 @@ import sys
 # args to use only users arguments
 # args = sys.argv[1:]
 
-# some texte fhdeirernhivgwpdfgvief
 if __name__ == "__main__":
     print("=== Command Quest ===")
     print(f"Program name: {sys.argv[0]}")
