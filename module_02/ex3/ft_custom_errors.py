@@ -18,8 +18,10 @@ class WaterError(GardenError):
 def check_plant():
     raise PlantError("The tomato plant is wilting!")
 
+
 def check_water():
     raise WaterError("Not enough water in the tank!")
+
 
 def test_custom_errors():
     print("\nTesting PlantError...")
@@ -44,6 +46,7 @@ def test_custom_errors():
         check_water()
     except GardenError as error:
         print(f"Caught GardenError: {error}")
+
 
 if __name__ == "__main__":
     print("=== Custom Garden Errors Demo ===")

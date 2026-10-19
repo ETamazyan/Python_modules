@@ -2,7 +2,6 @@
 
 def input_temperature(temp_str) -> int:
     num_of_str = int(temp_str)
-    # print(f"{num_of_str}")
     return num_of_str
 
 
@@ -23,10 +22,6 @@ def test_temperature() -> None:
 
 
 if __name__ == "__main__":
-    # num = input_temperature("55")
-    # print(num)
-    # print(type(num))
-
     print("=== Garden Temperature ===")
     # test_inputs = ["25", "abc"]
 

@@ -51,11 +51,10 @@ if __name__ == "__main__":
     # for temp_str in test_inputs:
     #     print(f"\nInput data is '{temp_str}'")
     test_temperature()
-    
+
     print("\nAll tests completed - program didn't crash!")
 
-
-#just the only improvement available
+# just the only improvement available
 # def test_temperature() -> None:
 #     test_inputs = ["25", "abc", "100", "-50"]
 

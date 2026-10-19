@@ -16,6 +16,7 @@ def water_plant(plant_name: str) -> None:
 
     print(f"Watering {plant_name}: [OK]")
 
+
 def test_watering_system(plants: list) -> None:
     print("Opening watering system")
     try:
@@ -27,6 +28,7 @@ def test_watering_system(plants: list) -> None:
         return
     finally:
         print("Closing watering system")
+
 
 if __name__ == "__main__":
     print("=== Garden Watering System ===\n")
