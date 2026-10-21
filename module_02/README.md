@@ -23,7 +23,7 @@ This module focuses on handling errors and exceptions in Python. It explores how
 ## 📂 Project Structure
 
 ```text
-Python_Module_02/
+module_02/
 ├── ex00/
 │   └── ...
 ├── ex01/
@@ -39,9 +39,9 @@ _The structure is illustrative. Adjust it to match the official subject and your
 
 | Exercise | Description                                            | Status |
 | -------- | ------------------------------------------------------ | ------ |
-| ex00     | First exercise — update with the official description  | ⬜     |
-| ex01     | Second exercise — update with the official description | ⬜     |
-| ex02     | Third exercise — update with the official description  | ⬜     |
+| ex00     | First exercise — update with the official description  | ✅     |
+| ex01     | Second exercise — update with the official description | ✅     |
+| ex02     | Third exercise — update with the official description  | ✅     |
 
 Update this table with the actual exercise names, requirements, and progress.
 
@@ -84,29 +84,29 @@ python3 --version
 Navigate to an exercise directory and run its Python file:
 
 ```bash
-python3 filename.py
+python3.10 filename.py
 ```
 
 Replace `filename.py` with the actual filename required by the exercise.
 
 ## 🧠 What I Learned
 
-- [ ] Handle exceptions with `try` and `except`.
-- [ ] Understand common built-in exceptions.
-- [ ] Raise exceptions to validate data.
-- [ ] Create custom exceptions when needed.
-- [ ] Use `else` and `finally` appropriately.
-- [ ] Debug errors and improve program reliability.
+- [x] Handle exceptions with `try` and `except`.
+- [x] Understand common built-in exceptions.
+- [x] Raise exceptions to validate data.
+- [x] Create custom exceptions when needed.
+- [x] Use `else` and `finally` appropriately.
+- [x] Debug errors and improve program reliability.
 
 ## ✅ Progress
 
-**Status:** In progress 🚧
+**Status:** ✅ Completed
 
 This module is part of my Python programming journey at 42 Yerevan. Through practical exercises, I am developing my debugging skills and learning to write safer, more reliable Python programs.
 
 ## 👤 Author
 
-etamazya
+**Student at 42 Yerevan: etamazya**
 
 ---
 

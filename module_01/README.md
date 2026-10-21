@@ -23,7 +23,7 @@ This module focuses on developing Python programming skills through practical ex
 ## 📂 Project Structure
 
 ```text
-Python_Module_01/
+module_01/
 ├── ex00/
 │   └── ...
 ├── ex01/
@@ -37,11 +37,11 @@ _The structure above is an example. Replace it with the actual structure of your
 
 ## 📚 Exercises
 
-| Exercise | Description            | Status         |
-| -------- | ---------------------- | -------------- |
-| ex00     | First module exercise  | ⬜ In progress |
-| ex01     | Second module exercise | ⬜ Not started |
-| ex02     | Third module exercise  | ⬜ Not started |
+| Exercise | Description            | Status       |
+| -------- | ---------------------- | ------------ |
+| ex00     | First module exercise  | ✅ Completed |
+| ex01     | Second module exercise | ✅ Completed |
+| ex02     | Third module exercise  | ✅ Completed |
 
 Update the exercise names and descriptions according to the official subject.
 
@@ -56,7 +56,7 @@ python3 --version
 Navigate to the desired exercise directory and run the required script:
 
 ```bash
-python3 filename.py
+python3.10 filename.py
 ```
 
 Replace `filename.py` with the actual Python file name.
@@ -72,14 +72,21 @@ Replace `filename.py` with the actual Python file name.
 
 ## 🧠 What I Learned
 
-- [ ] Understand how classes and objects work.
-- [ ] Define and initialize objects.
-- [ ] Implement methods and attributes.
-- [ ] Organize code into reusable components.
-- [ ] Test and debug Python programs.
+- [x] Understand how classes and objects work.
+- [x] Define and initialize objects.
+- [x] Implement methods and attributes.
+- [x] Organize code into reusable components.
+- [x] Test and debug Python programs.
 
 ## ✅ Progress
 
-**Status:** In progress 🚧
+**Status:** ✅ Completed
+
+
+## 👤 Author
+
+**Student at 42 Yerevan: etamazya**
+
+---
 
 This module is part of my programming journey at 42 Yerevan. Each exercise helps me strengthen my Python skills and develop a deeper

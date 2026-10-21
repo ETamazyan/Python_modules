@@ -55,7 +55,7 @@ Replace `filename.py` with the actual filename required by the exercise.
 
 ## ✅ Progress
 
-**Status:** In progress
+**Status:** ✅ Completed
 
 This README documents my learning journey through the Python curriculum at 42 Yerevan.
 

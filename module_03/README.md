@@ -41,15 +41,14 @@ _This is an example structure. Use the actual folder and file names required by 
 
 | Exercise | Description                                             | Status |
 | -------- | ------------------------------------------------------- | ------ |
-| ex00     | First exercise — update with the official description   | ⬜     |
-| ex01     | Second exercise — update with the official description  | ⬜     |
-| ex02     | Third exercise — update with the official description   | ⬜     |
-| ex03     | Fourth exercise — update with the official description  | ⬜     |
-| ex04     | Fifth exercise — update with the official description   | ⬜     |
-| ex05     | Sixth exercise — update with the official description   | ⬜     |
-| ex06     | Seventh exercise — update with the official description | ⬜     |
+| ex00     | First exercise — update with the official description   | ✅     |
+| ex01     | Second exercise — update with the official description  | ✅     |
+| ex02     | Third exercise — update with the official description   | ✅     |
+| ex03     | Fourth exercise — update with the official description  | ✅     |
+| ex04     | Fifth exercise — update with the official description   | ✅     |
+| ex05     | Sixth exercise — update with the official description   | ✅     |
+| ex06     | Seventh exercise — update with the official description | ✅     |
 
-Update this table to match the exercises in your official subject and track your progress.
 
 ## 💡 Key Concepts
 
@@ -71,7 +70,7 @@ Dictionaries store data as key-value pairs.
 
 ```python
 student = {
-    "name": "Alex",
+    "name": "Diana",
     "level": 3
 }
 
@@ -137,36 +136,36 @@ python3 --version
 Navigate to an exercise directory:
 
 ```bash
-cd Python_Module_03
+cd module_03
 ```
 
 Run the required Python file:
 
 ```bash
-python3 filename.py
+python3.10 filename.py
 ```
 
 Replace `filename.py` with the actual exercise filename. Follow the subject's requirements for command-line arguments and execution.
 
 ## 🧠 What I Learned
 
-- [ ] Organize and manipulate data using Python collections.
-- [ ] Choose the appropriate data structure for a task.
-- [ ] Iterate over and transform collections.
-- [ ] Work with command-line arguments.
-- [ ] Understand generators and lazy evaluation.
-- [ ] Write clear, reusable, and efficient code.
-- [ ] Test programs and handle unexpected input.
+- [x] Organize and manipulate data using Python collections.
+- [x] Choose the appropriate data structure for a task.
+- [x] Iterate over and transform collections.
+- [x] Work with command-line arguments.
+- [x] Understand generators and lazy evaluation.
+- [x] Write clear, reusable, and efficient code.
+- [x] Test programs and handle unexpected input.
 
 ## ✅ Progress
 
-**Status:** In progress 🚧
+**Status:** ✅ Completed
 
 This module is part of my Python programming journey at 42 Yerevan. Each exercise helps me improve my understanding of data structures, data processing, and Python programming techniques.
 
 ## 👤 Author
 
-42 Yerevan student: etamazya
+**Student at 42 Yerevan: etamazya**
 
 ---
 
