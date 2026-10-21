@@ -15,7 +15,7 @@ This module introduces the fundamentals of Python programming through a series o
 
 ## 🛠️ Requirements
 
-- Python 3
+- Python 3.10 and higher
 - Git
 - A code editor such as VS Code
 
@@ -29,10 +29,10 @@ python3 --version
 
 | Exercise | Description                         | Status |
 | -------- | ----------------------------------- | ------ |
-| ex00     | Add the actual exercise description | ⬜     |
-| ex01     | Add the actual exercise description | ⬜     |
-| ex02     | Add the actual exercise description | ⬜     |
-| ex03     | Add the actual exercise description | ⬜     |
+| ex00     | Add the actual exercise description | ✅     |
+| ex01     | Add the actual exercise description | ✅     |
+| ex02     | Add the actual exercise description | ✅     |
+| ex03     | Add the actual exercise description | ✅     |
 
 Update this table to match the exercises in your subject.
 
@@ -41,17 +41,17 @@ Update this table to match the exercises in your subject.
 Navigate to the relevant exercise directory and execute the Python file:
 
 ```bash
-python3 filename.py
+python3.10 filename.py
 ```
 
 Replace `filename.py` with the actual filename required by the exercise.
 
 ## 📚 What I Learned
 
-- [ ] Python syntax and basic types
-- [ ] Functions and control flow
-- [ ] String manipulation
-- [ ] Problem-solving and debugging
+- [x] Python syntax and basic types
+- [x] Functions and control flow
+- [x] String manipulation
+- [x] Problem-solving and debugging
 
 ## ✅ Progress
 
@@ -61,7 +61,7 @@ This README documents my learning journey through the Python curriculum at 42 Ye
 
 ## 👤 Author
 
-Student at 42 Yerevan
+**Student at 42 Yerevan: etamazya**
 
 ---
 

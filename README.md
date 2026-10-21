@@ -27,48 +27,46 @@ Throughout these modules, I aim to:
 
 ## 📚 Module Index
 
-| Module                                  | Description                            | Status         |
-| --------------------------------------- | -------------------------------------- | -------------- |
-| [Python Module 00](./Python_Module_00/) | Module 00 exercises and learning notes | 🚧 In progress |
-| [Python Module 01](./Python_Module_01/) | Module 01 exercises and learning notes | ⬜ Not started |
-| [Python Module 02](./Python_Module_02/) | Module 02 exercises and learning notes | ⬜ Not started |
-| [Python Module 03](./Python_Module_03/) | Module 03 exercises and learning notes | ⬜ Not started |
-| [Python Module 04](./Python_Module_04/) | Module 04 exercises and learning notes | ⬜ Not started |
-| [Python Module 05](./Python_Module_05/) | Module 05 exercises and learning notes | ⬜ Not started |
-| [Python Module 06](./Python_Module_06/) | Module 06 exercises and learning notes | ⬜ Not started |
-| [Python Module 07](./Python_Module_07/) | Module 07 exercises and learning notes | ⬜ Not started |
-| [Python Module 08](./Python_Module_08/) | Module 08 exercises and learning notes | ⬜ Not started |
-| [Python Module 09](./Python_Module_09/) | Module 09 exercises and learning notes | ⬜ Not started |
-| [Python Module 10](./Python_Module_10/) | Module 10 exercises and learning notes | ⬜ Not started |
-
-_Update the links, folder names, and statuses to match your actual repository. The module descriptions are intentionally general until the official subject contents are confirmed._
+| Module                           | Description                            | Status         |
+| -------------------------------- | -------------------------------------- | -------------- |
+| [Python Module 00](./module_00/) | Module 00 exercises and learning notes | ✅ Completed   |
+| [Python Module 01](./module_01/) | Module 01 exercises and learning notes | ✅ Completed   |
+| [Python Module 02](./module_02/) | Module 02 exercises and learning notes | ✅ Completed   |
+| [Python Module 03](./module_03/) | Module 03 exercises and learning notes | ✅ Completed   |
+| [Python Module 04](./module_04/) | Module 04 exercises and learning notes | 🚧 In progress |
+| [Python Module 05](./module_05/) | Module 05 exercises and learning notes | ⬜ Not started |
+| [Python Module 06](./module_06/) | Module 06 exercises and learning notes | ⬜ Not started |
+| [Python Module 07](./module_07/) | Module 07 exercises and learning notes | ⬜ Not started |
+| [Python Module 08](./module_08/) | Module 08 exercises and learning notes | ⬜ Not started |
+| [Python Module 09](./module_09/) | Module 09 exercises and learning notes | ⬜ Not started |
+| [Python Module 10](./module_10/) | Module 10 exercises and learning notes | ⬜ Not started |
 
 ## 🗂️ Repository Structure
 
 ```text
 Python-Modules/
 ├── README.md
-├── Python_Module_00/
+├── module_00/
 │   └── README.md
-├── Python_Module_01/
+├── module_01/
 │   └── README.md
-├── Python_Module_02/
+├── module_02/
 │   └── README.md
-├── Python_Module_03/
+├── module_03/
 │   └── README.md
-├── Python_Module_04/
+├── module_04/
 │   └── README.md
-├── Python_Module_05/
+├── module_05/
 │   └── README.md
-├── Python_Module_06/
+├── module_06/
 │   └── README.md
-├── Python_Module_07/
+├── module_07/
 │   └── README.md
-├── Python_Module_08/
+├── module_08/
 │   └── README.md
-├── Python_Module_09/
+├── module_09/
 │   └── README.md
-└── Python_Module_10/
+└── module_10/
     └── README.md
 ```
 
@@ -78,7 +76,7 @@ Each module directory contains its own exercises and a dedicated README describi
 
 To work with the projects in this repository, you may need:
 
-- Python 3
+- Python 3 (Python 3.10+)
 - Git
 - A code editor or IDE
 - A terminal or command-line interface
@@ -94,7 +92,7 @@ python3 --version
 Clone the repository:
 
 ```bash
-git clone <your-repository-url>
+git clone <https://github.com/ETamazyan/Python_modules/tree/main>
 ```
 
 Navigate to the repository:
@@ -108,7 +106,7 @@ Open the module you want to work on and follow its instructions.
 To run a Python exercise:
 
 ```bash
-python3 filename.py
+python3.10 filename.py
 ```
 
 Replace `filename.py` with the actual filename required by the exercise. Some exercises may require additional command-line arguments or specific execution conditions.
@@ -127,19 +125,17 @@ My approach to each exercise is to:
 
 ## 📈 Overall Progress
 
-- [ ] Python Module 00
-- [ ] Python Module 01
-- [ ] Python Module 02
-- [ ] Python Module 03
-- [ ] Python Module 04
+- [x] Python Module 00
+- [x] Python Module 01
+- [x] Python Module 02
+- [x] Python Module 03
+- [ ] Python Module 04 — 🚧 In Progress
 - [ ] Python Module 05
 - [ ] Python Module 06
 - [ ] Python Module 07
 - [ ] Python Module 08
 - [ ] Python Module 09
 - [ ] Python Module 10
-
-Update this checklist as you complete each module.
 
 ## 📌 Notes
 
