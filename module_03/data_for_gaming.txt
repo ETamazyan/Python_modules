@@ -5,3 +5,8 @@
 
 # args to use only users arguments
 # args = sys.argv[1:]
+
+
+# below code ft_inventory_system.pywill print as output: set()
+    empty = set()
+    print(empty)
