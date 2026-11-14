@@ -10,3 +10,48 @@
 # below code ft_inventory_system.pywill print as output: set()
     empty = set()
     print(empty)
+
+
+-----
+important Python concept: generators.
+
+next()	Retrieve the next value from a generator
+
+typing.Generator	Add generator type annotations
+
+random.*	Randomly select players, actions, and list positions
+
+if we use yield instead of return
+
+def get_number():
+    yield 10
+    yield 20
+    yield 30
+
+generator = get_number()
+
+# You can request values one by one using next():
+
+print(next(generator))  # 10
+print(next(generator))  # 20
+print(next(generator))  # 30
+
+How yield works
+1. First next() call
+   
+   The function starts and reaches yield 10. It gives back 10 and pauses.
+2. Second next() call
+   
+   The function resumes after the previous yield, reaches yield 20, gives back 20 and pauses again.
+3. Third next() call
+   
+   It resumes again, reaches yield 30, gives back 30 and pauses.
+4. Fourth next() call
+   
+   The function finishes. Python raises StopIteration.
+
+The difference is:
+- return gives a result and finishes the function.
+- yield gives a result and pauses the function, allowing it to continue later.
+
+This is exactly what we need for an event stream.
