@@ -16,7 +16,6 @@ def ft_split(text: str, separator: str) -> tuple[str, str] | None:
         if text[i:i + len(separator)] == separator:
             if found_separator:
                 return None
-
             found_separator = True
             i += len(separator)
         else:
@@ -91,11 +90,9 @@ if __name__ == "__main__":
 
     print("Got inventory:", inventory)
 
-    # Creating item list
     item_list = list(inventory.keys())
     print("Item list:", item_list)
 
-    # Calculate total quantity
     total_quantity = sum(inventory.values())
     print(f"Total quantity of the {len(item_list)} items: {total_quantity}")
 
@@ -128,7 +125,6 @@ if __name__ == "__main__":
     else:
         print("Inventory is empty")
 
-    # Add a new item
     new_item = "magic_item"
 
     if new_item in inventory:

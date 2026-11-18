@@ -38,16 +38,16 @@ print(next(generator))  # 30
 
 How yield works
 1. First next() call
-   
+
    The function starts and reaches yield 10. It gives back 10 and pauses.
 2. Second next() call
-   
+
    The function resumes after the previous yield, reaches yield 20, gives back 20 and pauses again.
 3. Third next() call
-   
+
    It resumes again, reaches yield 30, gives back 30 and pauses.
 4. Fourth next() call
-   
+
    The function finishes. Python raises StopIteration.
 
 The difference is:
@@ -55,3 +55,13 @@ The difference is:
 - yield gives a result and pauses the function, allowing it to continue later.
 
 This is exactly what we need for an event stream.
+
+list comprehension:
+event_list = [next(event_generator) for _ in range(10)]
+
+
+
+Let's understand this syntax.
+
+A normal list comprehension looks like:
+numbers = [expression for variable in iterable]
